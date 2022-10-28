@@ -15,7 +15,10 @@ read baseName
 # Checking for wrong base name
 if [ ${baseName} != ubuntu ] || [ ${baseName} != centos ] || [ ${baseName} != alpine ]
 then
+cd -
+sudo rm -r ${folderName}
 echo "Please enter a valid choice between ubuntu, centos or alpine."
+exit 1
 fi
 
 echo "What port do you wish to use?: "
